@@ -739,10 +739,10 @@ function PrincipleChat({ plant, principle, scores, onScore, onBack }) {
       </div>
 
       {/* Chat area */}
-      <div style={{display:"grid",gridTemplateColumns:"1fr 280px",flex:1,overflow:"hidden"}}>
+      <div style={{display:"grid",gridTemplateColumns:"1fr 280px",flex:1,minHeight:0,overflow:"hidden"}}>
         {/* Messages */}
-        <div style={{display:"flex",flexDirection:"column",borderRight:"1px solid #eee"}}>
-          <div ref={chatRef} style={{flex:1,overflowY:"auto",padding:"24px"}}>
+        <div style={{display:"flex",flexDirection:"column",borderRight:"1px solid #eee",minHeight:0}}>
+          <div ref={chatRef} style={{flex:1,minHeight:0,overflowY:"auto",padding:"24px"}}>
             {messages.map((m,i)=><ChatBubble key={i} role={m.role} text={m.content}/>)}
             {loading && (
               <div style={{display:"flex",gap:10,marginBottom:16}}>
